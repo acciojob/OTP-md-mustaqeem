@@ -22,11 +22,11 @@ codes.forEach((code, index) => {
   code.addEventListener("keydown", (e) => {
     if (e.key === "Backspace") {
 
-      // if current has value → clear it
+      // case 1: current filled → clear it
       if (code.value !== "") {
         code.value = "";
       } 
-      // if empty → go to previous
+      // case 2: empty → go to previous
       else if (index > 0) {
         codes[index - 1].value = "";
         codes[index - 1].focus();
